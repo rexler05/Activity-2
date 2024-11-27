@@ -6,7 +6,7 @@
     <p class="confirmation-message">Are you sure you want to delete "{{ pet.name }}"?</p>
     <form action="{% url 'pet_delete' pet.pk %}" class="confirmation-form"  method="post">
       {% csrf_token %}
-      <button type="submit" class="confirmation-button">Confirm</button>
+      <input type="submit" value="Confirm" class="confirmation-button">
     </form>
     <a href="{% url 'pets' %}" class="cancel-link">Cancel</a>
   </div>
