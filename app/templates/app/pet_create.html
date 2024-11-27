@@ -4,7 +4,7 @@
 <div class="create-pet-container">
     <h2 class="create-pet-title">Create a New Pet</h2>
 
-    <form method="POST" enctype="multipart/form-data" class="create-pet-form">
+    <form action="{% url 'pet_create' %}" enctype="multipart/form-data" class="create-pet-form" method="POST">
         {% csrf_token %}
         <div class="form-group">
             {{ form.as_p }}
