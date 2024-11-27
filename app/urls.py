@@ -17,8 +17,8 @@ urlpatterns = [
 
     path('', PetListView.as_view(), name='pets'),
     path('pets/<int:pk>/', PetDetailView.as_view(), name='pet_detail'),
-    path('pets/create/', PetCreateView.as_view(), name='pet_form'),
-    path('pets/<int:pk>/edit/', PetUpdateView.as_view(), name='pet_edit'),
+    path('pets/create/', PetCreateView.as_view(), name='pet_create'),
+    path('pets/<int:pk>/edit/', PetUpdateView.as_view(), name='pet_update'),
     path('pets/<int:pk>/delete/', PetDeleteView.as_view(), name='pet_delete'),
 
 ]

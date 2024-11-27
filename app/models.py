@@ -29,9 +29,10 @@ class AdoptionApplication(models.Model):
     additional_details = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=20, choices=
-    [('PENDING', 'Pending'), ('APPROVED', 'Approved'), ('DENIED', 'Denied')],
-        default='PENDING'
-    )
+    [('PENDING', 'Pending'),
+     ('APPROVED', 'Approved'),
+     ('DENIED', 'Denied')],
+     default='PENDING')
     def __str__(self):
         return f"{self.pet.name} - {self.user.username}"
 

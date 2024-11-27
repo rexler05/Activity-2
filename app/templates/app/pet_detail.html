@@ -18,14 +18,10 @@
                     <p><strong class="pet-label">Age:</strong> {{ pet.age }}</p>
                     <p><strong class="pet-label">Description:</strong> {{ pet.description }}</p>
             </div>
-
-
-
             <div class="pet-action-buttons">
-                    <a href="{% url 'pet_edit' pet.pk %}" class="pet-edit-btn">Edit</a>
+                    <a href="{% url 'pet_update' pet.pk %}" class="pet-edit-btn">Edit</a>
                     <a href="{% url 'pet_delete' pet.pk %}" class="pet-delete-btn">Delete</a>
             </div>
-
             <a href="{% url 'pets' %}" class="pet-back-link">Back to Pet List</a>
     </div>
 </div>
